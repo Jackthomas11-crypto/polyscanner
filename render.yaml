@@ -1,0 +1,9 @@
+services:
+  - type: web
+    name: polyscanner-proxy
+    env: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: ODDS_API_KEY
+        sync: false
